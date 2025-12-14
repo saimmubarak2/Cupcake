@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hops & Soup 🐰</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">🐰 Hops & Soup 🐰</h1>
+            <p class="message">Click this button to see what Hops has to say.</p>
+            <button class="cute-button" id="showAnimationBtn">
+                <span>✨ Click Me! ✨</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal/Popup for Animation -->
+    <div class="modal" id="animationModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeBtn">×</button>
+            <div class="animation-stage" id="animationStage">
+                <!-- Scene 1 & 3: Initial positions -->
+                <img src="soup_without_flowers.png" alt="Soup" class="bunny soup" id="soup">
+                <img src="hops_giving_bucket.png" alt="Hops" class="bunny hops" id="hops">
+                
+                <!-- Scene 2: Running Hops (hidden initially) -->
+                <img src="hops_running_with_flowers.png" alt="Hops Running" class="bunny hops-running" id="hopsRunning">
+                
+                <!-- Final Message -->
+                <div class="sorry-message" id="sorryMessage">
+                    <h2>I'm sorry soup 💕</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
