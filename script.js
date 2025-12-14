@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const soup = document.getElementById('soup');
     const hops = document.getElementById('hops');
     const hopsRunning = document.getElementById('hopsRunning');
+    const sorryMessage = document.getElementById('sorryMessage');
 
     let animationTimeout;
 
@@ -73,6 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 hops.style.opacity = '1';
             }, 500);
         }, 8000);
+
+        // Final Scene: Show "I'm sorry soup" message
+        setTimeout(() => {
+            sorryMessage.classList.add('show');
+        }, 10000);
     }
 
     function resetAnimation() {
@@ -105,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hopsRunning.style.display = 'none';
         hopsRunning.style.right = '50px';
         hopsRunning.style.left = 'auto';
+        
+        // Reset Sorry Message
+        sorryMessage.classList.remove('show');
     }
 
     function stopAnimation() {
